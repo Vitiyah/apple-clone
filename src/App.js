@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Header } from "./Header.js";
+import { Airpods } from "./Airpods.js";
+import { Pro } from "./Pro.js";
+import { Products } from "./Products.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Airpods />
+      <Pro />
+      <Products />
     </div>
   );
 }
 
 export default App;
+
+// const [count, setCount] = useState(1)
+
+// useEffect(() => {
+//   if (count < 146) {
+//     setTimeout(() => {
+//       setCount(count + 1);
+//     }, 50);
+//   } else {
+//     setCount(1);
+//   }
+// }, [count]);

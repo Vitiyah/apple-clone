@@ -1,20 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
 .App {
+  width: 100vw;
+  height: 100%;
+}
+
+.airpods-container {
+  width: 100%;
+  height: 400vh;
   text-align: center;
+  transition: all 0.2s linear;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.airpods-hero {
+  background: black;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +37,31 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: sticky;
+  top: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.airpods-hero img {
+  width: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-1 {
+  width: 100%;
+  background: url("https://www.apple.com/v/airpods/t/images/overview/airpods_3rd_gen__dhy5bknhvtqq_medium_2x.jpg")
+    no-repeat center/cover;
+}
+
+.product-2 {
+  width: 100%;
+  background: url("https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    no-repeat center/cover;
+}
+
+.product-3 {
+  width: 100%;
+  background: url("https://www.apple.com/v/airpods/t/images/overview/airpods_max__f265q4g4ddym_medium_2x.png")
+    no-repeat center;
 }
